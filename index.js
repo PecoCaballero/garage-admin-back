@@ -15,7 +15,7 @@ var corsOptions = {
 };
 
 // Ativa a configuração CORS
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Parseia requisições do tipo JSON - application/json
 app.use(bodyParser.json());
