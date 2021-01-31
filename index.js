@@ -5,6 +5,7 @@ const cors = require("cors");
 const carRoute = require('./src/routes/car.route')
 const userRoute = require("./src/routes/user.route")
 const parkingSpaceRoute = require('./src/routes/parkingSpace.route')
+require('dotenv').config()
 
 const app = express();
 
@@ -25,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./src/models");
 db.mongoose
-  .connect(db.url, {
+  .connect(process.env.MONGODB_URL || db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
