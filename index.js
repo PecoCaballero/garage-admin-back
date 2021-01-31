@@ -11,7 +11,7 @@ const app = express();
 
 // Seta as configurações do CORS. No caso, especifica que apenas conexões de tal endereço serão aceitas. Ver: // https://expressjs.com/en/resources/middleware/cors.html
 var corsOptions = {
-  origin: "https://pecocaballero.github.io/garage-admin-front"
+  origin: "https://pecocaballero.github.io/"
 };
 
 // Ativa a configuração CORS
